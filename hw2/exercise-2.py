@@ -15,9 +15,16 @@
 #   transformStr('Lux') - > 'lux' (Починается на L)
 #   transformStr('up') - > 'UP' (Починается на U)
 #   transformStr('Luxery') - > 'luxer...' (Починается на L + довжина більше 5 символів)
+import sys
 
 
 def transformStr(str):
+    try:
+        len(str)
+    except TypeError:
+        print('Please use only string')
+        sys.exit()
+
     if len(str) >= 5:
         if str[0] == 'L' or str[0] == 'l':
             a = str[0:5]+'...'
