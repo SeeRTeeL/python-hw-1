@@ -17,9 +17,9 @@ def oddOrEven(num):
         sys.exit()
 
     if (num % 2) == 0:
-        print('Число Х є парним')
+        print(f'Число {num} є парним')
     else:
-        print('Число Х є непарним')
+        print(f'Число {num} є непарним')
 
 
 oddOrEven(1)  # 'Число Х є непарним'
